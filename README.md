@@ -21,10 +21,12 @@ docker build . -t andrequeiroz/reveal.js:latest
 
 A container can be started by executing the following command on the development directory:
 ```
-docker run -ditP --volume `pwd`:/tmp/ --workdir `pwd` --name container_name andrequeiroz/reveal.js:latest
+docker run -ditP --volume `pwd`:/tmp/ --workdir `pwd` --name container_name andrequeiroz/docker-reveal.js:latest
 ```
 
 Put the **index.html** file on the development directory and create inside of it a directory called **resources**. It can be used to save any file or directory needed by the presentation.
+
+The presentation will be served on the next port available from docker, usually starting from 32768, e.g. *http://localhost:32768/*.
 
 ## Debug
 
